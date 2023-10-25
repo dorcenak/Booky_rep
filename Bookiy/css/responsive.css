@@ -1,0 +1,585 @@
+/*----------------------------- Pour la maquette desktop-----------------------------------------------*/
+
+@media screen and (min-width: 993px) {
+    /* Partie Recherche */
+    /* on masque le bouton loupe pour mobile, à partir de 993px et + /
+        si on le met dans le code général, le bouton loupe n'apparaît jamais */
+    .bouton_rechercher_mobile {
+        display: none;
+    }
+}
+
+
+/*----------------------------- Pour la maquette tablette-----------------------------------------------*/
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    /**version tablette entre 769px et 992px **/
+    /* Main - corps de la page */
+    /* Partie Recherche */
+    /* on masque le bouton loupe pour mobile, entre 769px et 992px */
+    .bouton_rechercher_mobile {
+        display: none;
+    }
+    /* Partie filtres et info */
+    #filtres_categories {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 53px;
+        margin-left: -86px;
+    }
+    #filtres_categories>*:first-child {
+        margin-left: 20px;
+    }
+    #filtres_categories :nth-child(3) {
+        margin-right: 20px;
+    }
+    #filtres_categories>*:last-child {
+        margin-left: 20px;
+    }
+    .aspect_filtres {
+        margin-bottom: 20px;
+    }
+    /* Partie info */
+    #info {
+        margin-top: 0px;
+    }
+    /* Hébergements et populaires */
+    #hebergements_pop {
+        flex-wrap: wrap;
+    }
+    #hebergements {
+        width: 100%;
+    }
+    .titre_hebergements,
+    .titre_selection_populaires {
+        font-size: 1.5vmax;
+    }
+    .prix_hebergements,
+    .prix_selection_populaires {
+        font-size: 1.4vmax;
+    }
+    .etoiles_hebergements,
+    .etoiles_populaires {
+        font-size: 1vmax;
+    }
+    #afficher_plus {
+        margin-top: 20px;
+    }
+    #les_plus_populaires {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    #resultats_les_plus_populaires {
+        flex-direction: row;
+        margin-right: -21px;
+    }
+    .selection_les_plus_populaires {
+        width: 100%;
+        margin-right: 20px;
+    }
+}
+
+
+/*----------------------------- Pour la maquette mobile-----------------------------------------------*/
+
+@media screen and (min-width: 357px) and (max-width: 768px) {
+    /** version mobile entre 357px et 768px **/
+    /* Entête du site contenant le logo et le menu de navigation */
+    /* logo */
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+    }
+    /* menu */
+    ul.menu {
+        display: flex;
+        justify-content: space-between;
+    }
+    li.hebergements,
+    li.activites {
+        flex: auto;
+        width: 100%;
+        justify-content: space-around;
+        border-bottom: 4px solid #F2F2F2;
+        padding-bottom: 20px;
+    }
+    li.hebergements:hover,
+    li.activites:hover,
+    li.hebergements:focus,
+    li.activites:focus,
+    li.hebergements:active,
+    li.activites:active {
+        border-top: 0;
+        border-bottom: 3px solid #0065FC;
+    }
+    li.hebergements:hover a,
+    li.activites:hover a,
+    li.hebergements:focus a,
+    li.activites:focus a,
+    li.hebergements:active a,
+    li.activites:active a {
+        color: #0065FC;
+    }
+    /* Main - corps de la page */
+    /* Partie Recherche */
+    #recherche p {
+        padding-bottom: 30px;
+    }
+    #zone_recherche {
+        width: 100%;
+    }
+    input {
+        width: 232px;
+    }
+    /* On masque le bouton rechercher */
+    .bouton_rechercher_desktop_tablette {
+        display: none
+    }
+    /* Affichage du bouton loupe pour mobile */
+    .bouton_rechercher_mobile {
+        background-color: #0065FC;
+        color: white;
+        border: none;
+        border-radius: 16px 16px 16px 16px;
+        padding-left: 19px;
+        padding-right: 19px;
+        position: relative;
+        right: 15px;
+    }
+    .bouton_rechercher_mobile:hover,
+    .bouton_rechercher_mobile:focus,
+    .bouton_rechercher_mobile:active {
+        border: 1px solid #DEEBFF;
+        cursor: pointer;
+    }
+    /* Dimensionnement de l'icône "loupe" */
+    .loupe {
+        font-size: 18px;
+    }
+    /* Partie filtres et info */
+    #filtres {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 20px;
+    }
+    #titre_filtres {
+        margin-bottom: 20px;
+    }
+    #filtres_categories {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-right: 16px;
+    }
+    #filtres_categories>*:first-child,
+    #filtres_categories>*:nth-child(2),
+    #filtres_categories>*:nth-child(3) {
+        margin-right: -23px;
+    }
+    .aspect_filtres {
+        margin-bottom: 20px;
+    }
+    /* Partie info */
+    #info {
+        margin-top: 0px;
+    }
+    #texte_info {
+        font-size: 15px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    /* Partie hébergements et populaires */
+    #hebergements_pop {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0px;
+    }
+    #hebergements {
+        background-color: transparent;
+        width: 100%;
+        padding-top: 40px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    #titre_hebergements_ville {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #resultats_hebergements {
+        flex-direction: column;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 20px;
+    }
+    .choix_hebergements {
+        width: 100%;
+        margin-top: 6px;
+    }
+    .titre_hebergements {
+        font-size: 2.5vmax;
+    }
+    .prix_hebergements {
+        font-size: 2.1vmax;
+    }
+    .etoiles_hebergements {
+        font-size: 1.6vmax;
+    }
+    #afficher_plus {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 30px;
+        height: 0px;
+    }
+    #les_plus_populaires {
+        width: 100%;
+        border-radius: 0px;
+        margin-left: 0px;
+        padding-top: 40px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    #titre_les_plus_populaires {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #resultats_les_plus_populaires {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .selection_les_plus_populaires {
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+    .titre_selection_populaires {
+        font-size: 2.5vmax;
+    }
+    .prix_selection_populaires {
+        font-size: 2.1vmax;
+    }
+    .etoiles_populaires {
+        font-size: 1.6vmax;
+        padding-top: 0;
+    }
+    /* Partie Activités */
+    #activites_ville {
+        padding: 0px;
+        margin-top: 65px;
+    }
+    #titre_activites_ville {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    #selection_activites {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        margin-top: 30px;
+        height: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .titre_selection_activite {
+        font-size: 2.5vmax;
+        padding-top: 3px;
+    }
+    #element_1,
+    #element_4,
+    #element_2,
+    #element_3,
+    #element_5,
+    #element_6 {
+        width: 100%;
+        height: 195px;
+    }
+    #elements_2_et_3,
+    #elements_5_et_6 {
+        width: 100%;
+    }
+    #element_1 img,
+    #element_2 img,
+    #element_3 img,
+    #element_4 img,
+    #element_5 img,
+    #element_6 img {
+        height: 75%;
+    }
+    #element_6 img {
+        -o-object-position: 0px -65px;
+        object-position: 0px -65px;
+        overflow: hidden;
+    }
+    #element_5 img {
+        -o-object-position: 0px -30px;
+        object-position: 0px -30px;
+        overflow: hidden;
+    }
+    .tous_les_elements {
+        margin-bottom: 20px;
+        height: 200px;
+    }
+    /* Partie Footer */
+    footer {
+        flex-direction: column;
+        margin-top: 28px;
+    }
+    .footer_colonne {
+        width: 100%;
+    }
+    /* Réduire la marge à gauche  */
+    #recherche,
+    #filtres_info,
+    footer {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media screen and (max-width: 356px) {
+    /* Entête du site contenant le logo et le menu de navigation */
+    /* logo */
+    /* Pour garder une position centrée du logo */
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+    }
+    img#logo {
+        width: 115px;
+        height: 55px;
+    }
+    /* Menu */
+    li.hebergements,
+    li.activites {
+        flex: auto;
+        width: 100%;
+        justify-content: space-around;
+        border-bottom: 4px solid #F2F2F2;
+        padding-bottom: 20px;
+    }
+    li.hebergements:hover,
+    li.activites:hover,
+    li.hebergements:focus,
+    li.activites:focus,
+    li.hebergements:active,
+    li.activites:active {
+        border-bottom: 3px solid #0065FC;
+        border-top: 0;
+    }
+    /* Main - corps de la page */
+    /* Partie Recherche */
+    #zone_recherche {
+        width: 100%;
+    }
+    input {
+        width: 100%;
+    }
+    /* On masque le bouton rechercher */
+    .bouton_rechercher_desktop_tablette {
+        display: none
+    }
+    /* Affichage du bouton loupe pour mobile */
+    .bouton_rechercher_mobile {
+        background-color: #0065FC;
+        color: white;
+        border: none;
+        border-radius: 18px;
+        padding-left: 19px;
+        padding-right: 19px;
+        /* position relative et rigth 15px pour décaler le bouton "loupe" légèrement vers la gauche sur le champ de recherche */
+        position: relative;
+        right: 15px;
+    }
+    /* Dimensionnement de l'icône "loupe" */
+    .loupe {
+        font-size: 18px;
+    }
+    /* Réduire la taille de l'écriture par défaut dans le champ de recherche input pour éviter troncage */
+    ::placeholder {
+        font-size: 12px;
+    }
+    /* Partie filtres et info */
+    #titre_filtres {
+        margin-bottom: 20px;
+    }
+    p#filtre_animaux {
+        white-space: nowrap;
+        /* évite le retour à la ligne de autorisés pour la catégorie "animaux autorisés" */
+    }
+    #filtres_categories {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        margin-left: 8px;
+    }
+    .aspect_filtres {
+        margin-bottom: 10px;
+        margin-left: 0px;
+    }
+    /* Partie info */
+    #info {
+        margin-top: 0px;
+    }
+    #texte_info {
+        font-size: 16px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    /* Partie hébergements et populaires */
+    #hebergements_pop {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0px;
+    }
+    #hebergements {
+        background-color: transparent;
+        width: 100%;
+        padding-top: 40px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    #titre_hebergements_ville {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #resultats_hebergements {
+        flex-direction: column;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 20px;
+    }
+    .choix_hebergements {
+        width: 100%;
+        margin-top: 6px;
+    }
+    .titre_hebergements {
+        font-size: 2.5vmax;
+    }
+    .prix_hebergements {
+        font-size: 2.1vmax;
+    }
+    .etoiles_hebergements {
+        font-size: 1.6vmax;
+    }
+    #afficher_plus {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 30px;
+        height: 0px;
+    }
+    #les_plus_populaires {
+        width: 100%;
+        border-radius: 0px;
+        margin-left: 0px;
+        padding-top: 40px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    #titre_les_plus_populaires {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #resultats_les_plus_populaires {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .selection_les_plus_populaires {
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+    .titre_selection_populaires {
+        font-size: 2.5vmax;
+    }
+    .prix_selection_populaires {
+        font-size: 2.1vmax;
+    }
+    .etoiles_populaires {
+        font-size: 1.6vmax;
+        padding-top: 0;
+    }
+    /* Partie Activités */
+    #activites_ville {
+        padding: 0px;
+        margin-top: 65px;
+    }
+    #titre_activites_ville {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    #selection_activites {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        margin-top: 30px;
+        height: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .titre_selection_activite {
+        font-size: 2.5vmax;
+        padding-top: 3px;
+        white-space: normal;
+    }
+    #element_1,
+    #element_4,
+    #element_2,
+    #element_3,
+    #element_5,
+    #element_6 {
+        width: 100%;
+        height: 195px;
+    }
+    #elements_2_et_3,
+    #elements_5_et_6 {
+        width: 100%;
+    }
+    #element_1 img,
+    #element_2 img,
+    #element_3 img,
+    #element_4 img,
+    #element_5 img,
+    #element_6 img {
+        height: 75%;
+    }
+    .tous_les_elements {
+        margin-bottom: 20px;
+        height: 200px;
+    }
+    /* Partie Footer */
+    footer {
+        flex-direction: column;
+        margin-top: 28px;
+    }
+    .footer_colonne {
+        width: 100%;
+    }
+    /* Réduire la marge à gauche */
+    #recherche,
+    #filtres_info,
+    footer {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
